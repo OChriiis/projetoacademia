@@ -8,7 +8,24 @@ public class App {
 		System.out.println();
 		// TODO Auto-generated method stub
 
-		Cliente clienteMarcos = new Cliente ();
+		Cliente clienteMarcos = new Cliente (); 
+
+		clienteMarcos.nome = "Marcos Bezerra";
+		clienteMarcos.datadenascimento = "1975/11/25";
+		clienteMarcos.sexo = "Masculino";
+		clienteMarcos.peso = "85.9";
+		clienteMarcos.altura = "1.87";
+		clienteMarcos.niveldeatividade = "Moderada";
+
+
+
+
+
+
+
+
+
+		
 		
 		
 		
