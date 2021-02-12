@@ -10,6 +10,8 @@ public class Cliente {
 	private double peso;
 	private double altura;
 	private int niveldeatividade;
+	private String situação
+	
 	
 	public void setNome(String nome) {
 		
@@ -42,13 +44,12 @@ public class Cliente {
 	
 	public LocalDate getDataDeNascimento() {
 		return this.datadenascimento;
-	}
+		}
 	 public int getIdade(){
 		LocalDate hoje = LocalDate.now():
 		Period period = Period.between(this.datadenascimento, hoje);
 		return period.getYears();
-
-	 }
+	 }nmjjjjm    
 	
 	 public char getSexo(){
 		  return this.sexo;
@@ -68,14 +69,21 @@ public class Cliente {
 	
 	public void setIMC(double IMC){
 	 return this.IMC
-	 }
+	
+	}
 	 public double getCalcularIMC(){
 	 return this.peso/(this.altura*this.altura)
 	 
-	 }
-	   
 	 
-	 if (this.getCalcularIMC() <= 18.5) {
+	}
+	   public String setSituação(String situação){
+	   return this.situação
+
+	}
+	    
+	   public String getSituação (){
+	 
+		if (this.getCalcularIMC() <= 18.5) {
 		return "Abaixo do peso!";
 		}
 		else if (this.getCalcularIMC() >= 18.6 && <=24.9){
@@ -92,7 +100,13 @@ public class Cliente {
 		 }
 		else (this.getCalcularIMC() >=40){
 			return "Obesidade III (Mórbida)";
-		}
+		
+			}
+		
+
+			
+			
+	}
 	 
 	
 	  
