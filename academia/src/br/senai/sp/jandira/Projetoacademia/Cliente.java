@@ -98,19 +98,19 @@ public class Cliente {
 		if (this.getCalcularIMC() <= 18.5) {
 		return "Abaixo do peso!";
 		}
-		else if (this.getCalcularIMC() >= 18.6 && this.getCalcularIMC() <=24.9){
+		else if (this.getCalcularIMC() >= 18.6 && this.getCalcularIMC() <= 24.9){
 			return "Peso ideal, parabéns!";
 		}
-		else if (this.getCalcularIMC() >=25.0 && this.getCalcularIMC() <=29.9 ){
+		else if (this.getCalcularIMC() >= 25.0 && this.getCalcularIMC() <= 29.9 ){
 			return "Levemente acima do peso!";
 		}
-		else if (this.getCalcularIMC() >=30.0 && this.getCalcularIMC() <= 34.9){
+		else if (this.getCalcularIMC() >= 30.0 && this.getCalcularIMC() <= 34.9){
 			return "Obesidade grau I!";
 		}
-		else if (this.getCalcularIMC() >=35.0 && this.getCalcularIMC() <= 39.5){
+		else if (this.getCalcularIMC() >= 35.0 && this.getCalcularIMC() <= 39.5){
 		  return "Obesidade grau II(Severa)";
 		 }
-		else (this.getCalcularIMC() >=40){
+		else (this.getCalcularIMC() >= 40){
 			return "Obesidade III (Mórbida)";
 		
 			}
