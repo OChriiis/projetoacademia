@@ -1,4 +1,8 @@
- 
+ package br.senai.sp.jandira.model.Projetoacademia;
+
+import br.senai.sp.jandira.Projetoacademia.Cliente;
+
+
 public class NivelDeAtividade {
 
 //Homem
