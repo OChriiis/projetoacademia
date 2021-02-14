@@ -1,0 +1,72 @@
+package br.senai.sp.jandira.model.Projetoacademia;
+
+import br.senai.sp.jandira.Projetoacademia.Cliente;
+
+public class App {
+
+	public static void main(String[] args) {
+		System.out.println();
+		// TODO Auto-generated method stub
+
+		Cliente clienteMarcos = new Cliente (); 
+
+		clienteMarcos.getNome:("Marcos Bezerra");
+		clienteMarcos.Datadenascimento:("1975/11/25");
+		clienteMarcos.getSexo() = "Masculino";
+		clienteMarcos.getPeso() = "85.9";
+		clienteMarcos.getAltura() = "1.87";
+		clienteMarcos.getNivelDeAtividade() = "Moderada";
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+
+}
