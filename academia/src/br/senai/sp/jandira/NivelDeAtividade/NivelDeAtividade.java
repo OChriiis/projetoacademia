@@ -1,4 +1,4 @@
- package br.senai.sp.jandira.model.Projetoacademia;
+ package br.senai.sp.jandira.NivelDeAtividade;
 
 public class NivelDeAtividade {
 

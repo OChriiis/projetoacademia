@@ -10,7 +10,7 @@ public class App {
 
 		Cliente clienteMarcos = new Cliente (); 
 
-		clienteMarcos.setNome("Marcos Bezerra");
+		clienteMarcos.nome = "Marcos Bezerra";
 		clienteMarcos.datadenascimento = "1975/11/25";
 		clienteMarcos.sexo = "Masculino";
 		clienteMarcos.peso = "85.9";

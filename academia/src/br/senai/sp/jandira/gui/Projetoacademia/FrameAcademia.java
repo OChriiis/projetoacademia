@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.Projetoacademia;
+package br.senai.sp.jandira.gui.Projetoacademia;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;

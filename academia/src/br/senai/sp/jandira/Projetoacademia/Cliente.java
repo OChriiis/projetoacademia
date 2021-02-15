@@ -3,20 +3,19 @@ package br.senai.sp.jandira.Projetoacademia;
 import java.time.LocalDate;
 import java.time.Period;
 
-import br.senai.sp.jandira.model.Projetoacademia.NivelDeAtividade;
+import br.senai.sp.jandira.NivelDeAtividade.*;
 
 public class Cliente {
 
 	private String nome;
 	private LocalDate datadenascimento;
-	private char sexo;
-	private double peso;
-	private double altura;
-	private int niveldeatividade;
+	private String sexo;
+	private Double peso;
+	private Double altura;
 	private String situação;
-	private double calcularNcd;
-	private double calcularIMC;
-	
+	private Double calcularNcd;
+	private Double calcularIMC;
+	private Double niveldeatividade;
 	
 	public void setNome(String nome) {
 		
@@ -26,14 +25,14 @@ public class Cliente {
 
 	 this.setDatadenascimento(datadenascimento);
 	 }
-	public void setSexo(char sexo) {
+	public String setSexo(String sexo) {
 
-	 if(sexo.equals("Masculino") || tipo.ContentEquals ("Feminino")) {
+	 if(sexo.contentEquals("Masculino") || tipo.contentEquals ("Feminino")) {
 		
 			this.sexo = sexo;
 			}
 		else {
-			return "sexo Invalido.";
+			return "sexo invalido.";
 		}
 	}
 	public void setPeso(double peso){
@@ -44,7 +43,7 @@ public class Cliente {
 
 	this.altura = altura;
 	}
-	public void setNivelDeAtividade (int niveldeatividade){
+	public Double setNivelDeAtividadeDouble(int niveldeatividade){
 
 	 this.niveldeatividade = niveldeatividade;
 	}
@@ -62,7 +61,7 @@ public class Cliente {
 		return period.getYears();
 	 }   
 	
-	 public char getSexo(){
+	 public String getSexo(){
 		  return this.sexo;
 	 }
 	
@@ -88,7 +87,7 @@ public class Cliente {
 	}
 	
 	public double setCalcularNcd(double Ncd){
-		return this.Ncd;
+		return this.calcularNcd;
 	}
 	
 	public String setSituação(String situação){
@@ -133,19 +132,19 @@ public class Cliente {
 				Ncd = 15.3 * this.peso + 697;
 				}		
 			else if(this.getIdade() >= 30 && this.getIdade() <=60){
-				Ncd 11.6 * this.peso + 879;
+				Ncd = 11.6 * this.peso + 879;
 			}
 			else (this.getIdade() => 60){
 				Ncd = 13.5 * this.peso + 487;
 			}
 
-			if(this.niveldeatividade == NivelDeAtividade.leve) {
+			if(this.niveldeatividade == niveldeatividade.leve) {
 				Ncd*= 1.5;
 			}
-			else if(this.niveldeatividade == NivelDeAtividade.moderado){
+			else if(this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.moderado){
 				Ncd*= 1.8;
 			}
-			else (this.niveldeatividade == NivelDeAtividade.intenso){
+			else (this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.intenso){
 				Ncd*= 2.1;
 			}
 
@@ -165,13 +164,13 @@ public class Cliente {
 				Ncd = 10.5 * this.peso + 596;
 			}
 
-			if(this.niveldeatividade == NivelDeAtividade.leve1) {
+			if(this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.leve1) {
 				Ncd*= 1.6;
 			}
-			else if(this.niveldeatividade == NivelDeAtividade.moderado1){
+			else if(this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.moderado1){
 				Ncd*= 1.6;
 			}
-			else (this.niveldeatividade == NivelDeAtividade.intenso1){
+			else (this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.intenso1){
 				Ncd*= 1.8;
 			}	
 			
