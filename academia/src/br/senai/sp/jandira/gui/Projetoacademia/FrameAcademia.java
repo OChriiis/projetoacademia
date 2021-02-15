@@ -1,9 +1,12 @@
 package br.senai.sp.jandira.gui.Projetoacademia;
 
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+
+public static main(String[] args)
 
 public class FrameAcademia {
 
@@ -14,7 +17,24 @@ public class FrameAcademia {
 	tela.setTitle("Academia");
 	tela.setSize(1080, 720);
 	tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	tela.setLayout(null);
+	
+	
+
+	//JLabelAltura
+	JLabel labelNome = new JLabel();
+	labelNome.setText("Nome");
+	labelNome.setBounds(10, 10, 60, 30);
+
+	//JTextFieldAltura
+	JTextField textNome = new JTextField();
+	textNome.setBounds(70, 10, 50, 30);
+
+	
+	
+	
+	
+	
+	
 	
 	//JLabelAltura
 	JLabel labelAltura = new JLabel();
@@ -55,9 +75,8 @@ public class FrameAcademia {
 
 
 
-
+	tela.setLayout(null);
 	tela.setVisible(true);
-
 
 
 

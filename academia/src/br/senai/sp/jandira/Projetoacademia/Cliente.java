@@ -12,7 +12,7 @@ public class Cliente {
 	private String sexo;
 	private Double peso;
 	private Double altura;
-	private String situação;
+	private String situacao;
 	private Double calcularNcd;
 	private Double calcularIMC;
 	private Double niveldeatividade;
@@ -21,20 +21,16 @@ public class Cliente {
 		
 	this.nome = nome;
 	}
-	 public void setDataDeNascimento(LocalDate datadenascimento) {
-
-	 this.setDatadenascimento(datadenascimento);
-	 }
-	public String setSexo(String sexo) {
-
-	 if(sexo.contentEquals("Masculino") || tipo.contentEquals ("Feminino")) {
-		
-			this.sexo = sexo;
-			}
-		else {
-			return "sexo invalido.";
+	public void setDatadenascimento(LocalDate datadenascimento) {
+		this.datadenascimento = datadenascimento;
+	} 
+	public LocalDate getDataDeNascimento() {
+		return this.datadenascimento;
 		}
-	}
+		public String setSexo(String sexo) {
+			return this.sexo;
+		}
+	
 	public void setPeso(double peso){
 
 	 this.peso = peso;
@@ -43,26 +39,32 @@ public class Cliente {
 
 	this.altura = altura;
 	}
-	public Double setNivelDeAtividadeDouble(int niveldeatividade){
+	public Double setniveldeatividade(Double niveldeatividade){
 
-	 this.niveldeatividade = niveldeatividade;
+	 return this.niveldeatividade = niveldeatividade;
 	}
 	
 	public String getNome() {
 		return this.nome;
 	}
 	
-	public LocalDate getDataDeNascimento() {
-		return this.getDatadenascimento();
-		}
 	 public int getIdade(){
 		LocalDate hoje = LocalDate.now();
-		Period period = Period.between(this.getDatadenascimento(), hoje);
+		Period period = Period.between(this.getDataDeNascimento(), hoje);
 		return period.getYears();
 	 }   
 	
 	 public String getSexo(){
-		  return this.sexo;
+
+
+		 if(this.sexo == "Feminino"){
+			
+			 return "Feminino";
+			}
+		 else {
+				return "Masculino";
+		 
+		 }
 	 }
 	
 	public double getPeso(){
@@ -73,12 +75,12 @@ public class Cliente {
 		return this.altura;
 	}
 	
-	public int getNivelDeAtividade(){
+	public Double getNivelDeAtividade(){
 		return this.niveldeatividade;
 	}
 	
-	public void setCalcularIMC(double IMC){
-	 return this.calcularIMC();
+	public double setCalcularIMC(double IMC){
+	 return this.getCalcularIMC();
 	
 	}
 	 public double getCalcularIMC(){
@@ -86,16 +88,16 @@ public class Cliente {
 	 
 	}
 	
-	public double setCalcularNcd(double Ncd){
+	public double setCalcularNcd(double calcularNcd){
 		return this.calcularNcd;
 	}
 	
-	public String setSituação(String situação){
-	   return this.situação;
+	public String setSituacao(String situacao){
+	   return this.situacao;
 
 	}
 	    
-	   public String getSituação (){
+	   public String getSituacao (){
 	 
 		if (this.getCalcularIMC() <= 18.5) {
 		return "Abaixo do peso!";
@@ -113,13 +115,12 @@ public class Cliente {
 		  return "Obesidade grau II(Severa)";
 		 }
 		else {
-			(this.getCalcularIMC() >= 40){
-				return "Obesidade III (Mórbida)";
+			return "Obesidade III (Mórbida)";
 			
 			} 
 			}
 		
-	}			
+				
 
 		public double getCalcularNcd (){
 		double Ncd = 0;
@@ -134,23 +135,20 @@ public class Cliente {
 			else if(this.getIdade() >= 30 && this.getIdade() <=60){
 				Ncd = 11.6 * this.peso + 879;
 			}
-			else (this.getIdade() => 60){
-				Ncd = 13.5 * this.peso + 487;
+			else {
+				Ncd*= 13.5 * this.peso + 487;
 			}
 
-			if(this.niveldeatividade == niveldeatividade.leve) {
+			if(this.niveldeatividade == NivelDeAtividade.leve) {
 				Ncd*= 1.5;
 			}
-			else if(this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.moderado){
-				Ncd*= 1.8;
-			}
-			else (this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.intenso){
+			else if(this.niveldeatividade == NivelDeAtividade.moderado)
 				Ncd*= 2.1;
 			}
 
-		}
+		
 			
-		//muié 
+		//mulher 
 			
 		if(this.sexo == "Feminino") {
 			
@@ -160,21 +158,22 @@ public class Cliente {
 			else if(this.getIdade() >= 30 && this.getIdade() <=60){
 				Ncd = 8.7 * this.peso + 829;
 			}
-			else (this.getIdade() =>60){
+			else {
 				Ncd = 10.5 * this.peso + 596;
 			}
 
-			if(this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.leve1) {
+			if(this.niveldeatividade == NivelDeAtividade.leve1) {
 				Ncd*= 1.6;
 			}
-			else if(this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.moderado1){
+			else if(this.niveldeatividade ==NivelDeAtividade.moderado1){
 				Ncd*= 1.6;
 			}
-			else (this.niveldeatividade == br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade.intenso1){
+			else {
 				Ncd*= 1.8;
 			}	
 			
 		}
+		return Ncd;
 		
 
 			
@@ -182,12 +181,7 @@ public class Cliente {
 			
 			
 	}
-		public LocalDate getDatadenascimento() {
-			return datadenascimento;
-		}
-		public void setDatadenascimento(LocalDate datadenascimento) {
-			this.datadenascimento = datadenascimento;
-		}	
+		
 
 
 
