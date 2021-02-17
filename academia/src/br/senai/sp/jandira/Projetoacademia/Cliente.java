@@ -165,7 +165,7 @@ public class Cliente {
 			if(this.niveldeatividade == NivelDeAtividade.leve1) {
 				Ncd*= 1.6;
 			}
-			else if(this.niveldeatividade ==NivelDeAtividade.moderado1){
+			else if(this.niveldeatividade == NivelDeAtividade.moderado1){
 				Ncd*= 1.6;
 			}
 			else {
@@ -175,11 +175,6 @@ public class Cliente {
 		}
 		return Ncd;
 		
-
-			
-			
-			
-			
 	}
 		
 

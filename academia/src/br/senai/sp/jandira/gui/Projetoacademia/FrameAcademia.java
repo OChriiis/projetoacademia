@@ -6,53 +6,40 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-public static main(String[] args)
 
 public class FrameAcademia {
 
 	public void criarTela() {
-
+		
+	
+		
 	// tela
+	
 	JFrame tela = new JFrame();
 	tela.setTitle("Academia");
 	tela.setSize(1080, 720);
 	tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
-	
-
 	//JLabelAltura
 	JLabel labelNome = new JLabel();
-	labelNome.setText("Nome");
+	labelNome.setText("Nome:");
 	labelNome.setBounds(10, 10, 60, 30);
 
 	//JTextFieldAltura
 	JTextField textNome = new JTextField();
 	textNome.setBounds(70, 10, 50, 30);
 
-	
-	
-	
-	
-	
-	
-	
-	//JLabelAltura
-	JLabel labelAltura = new JLabel();
-	labelAltura.setText("Altura:");
-	labelAltura.setBounds(10, 10, 60, 30);
-
-	//JTextFieldAltura
-	JTextField textAltura = new JTextField();
-	textAltura.setBounds(70, 10, 50, 30);
-
 	//JLabelPeso
 	JLabel labelPeso = new JLabel();
 	labelPeso.setText("Peso:");
-	labelPeso.setBounds(110, 10, 60, 30);
+	labelPeso.setBounds(150, 10, 60, 30);
 
 	//JTextAlturaPeso
 	JTextField textPeso = new JTextField();
-	textPeso.setBounds(170, 10, 50, 30);
+	textPeso.setBounds(200, 10, 50, 30);
+	
+	//JText
+	
 
 
 
@@ -63,10 +50,8 @@ public class FrameAcademia {
 
 
 
-
-
-	tela.getContentPane().add(labelAltura);
-	tela.getContentPane().add(textAltura);
+	tela.getContentPane().add(labelNome);
+	tela.getContentPane().add(textNome);
 	tela.getContentPane().add(labelPeso);
 	tela.getContentPane().add(textPeso);
 

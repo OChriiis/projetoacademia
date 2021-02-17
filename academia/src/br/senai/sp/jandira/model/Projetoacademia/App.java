@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade;
 import br.senai.sp.jandira.Projetoacademia.Cliente;
+import br.senai.sp.jandira.gui.Projetoacademia.FrameAcademia;
 
 public class App {
 
@@ -12,12 +13,14 @@ public class App {
 		// TODO Auto-generated method stub
 
 		Cliente clienteMarcos = new Cliente (); 
-
-		clienteMarcos.setNome("Marcus Bezerra");
-		clienteMarcos.setDatadenascimento(LocalDate.of(1975, 11, 25)); 
+		FrameAcademia telaAcademia = new FrameAcademia();		
+		telaAcademia.criarTela();
+		
+		clienteMarcos.setNome("João Félix");
+		clienteMarcos.setDatadenascimento(LocalDate.of(1995, 03, 2)); 
 		clienteMarcos.setSexo("Masculino");
-		clienteMarcos.setPeso(65);
-		clienteMarcos.setAltura(1.87);
+		clienteMarcos.setPeso(70);
+		clienteMarcos.setAltura(1.82);
 		clienteMarcos.setniveldeatividade(NivelDeAtividade.leve);
 		
 		System.out.println("nome:"+clienteMarcos.getNome());
