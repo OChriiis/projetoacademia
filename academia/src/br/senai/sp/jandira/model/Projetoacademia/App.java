@@ -17,11 +17,11 @@ public class App {
 		telaAcademia.criarTela();
 		
 		clienteMarcos.setNome("João Félix");
-		clienteMarcos.setDatadenascimento(LocalDate.of(1995, 03, 2)); 
+		clienteMarcos.setDatadenascimento(LocalDate.of(1945,03,02)); 
 		clienteMarcos.setSexo("Masculino");
-		clienteMarcos.setPeso(70);
-		clienteMarcos.setAltura(1.82);
-		clienteMarcos.setniveldeatividade(NivelDeAtividade.leve);
+		clienteMarcos.setPeso(90);
+		clienteMarcos.setAltura(1.90);
+		clienteMarcos.setniveldeatividade(NivelDeAtividade.moderado);
 		
 		System.out.println("nome:"+clienteMarcos.getNome());
 		System.out.println(clienteMarcos.getIdade());
@@ -29,54 +29,13 @@ public class App {
 		System.out.println(clienteMarcos.getPeso());
 		System.out.println(clienteMarcos.getSexo());
 		System.out.println(clienteMarcos.getCalcularIMC());
-		System.out.println(clienteMarcos.getCalcularNcd());
+		System.out.println("NCD = " + clienteMarcos.getCalcularNcd());
 		System.out.println(clienteMarcos.getSituacao());
 		
 		
+		clienteMarcos.getCalcularNcd();
 
 
-
-
-		
-		
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	}

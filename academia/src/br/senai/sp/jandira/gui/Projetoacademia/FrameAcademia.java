@@ -20,42 +20,54 @@ public class FrameAcademia {
 	tela.setSize(1080, 720);
 	tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
-	//JLabelAltura
+	//JLabelNome
 	JLabel labelNome = new JLabel();
 	labelNome.setText("Nome:");
 	labelNome.setBounds(10, 10, 60, 30);
 
-	//JTextFieldAltura
+	//JTextFieldNome
 	JTextField textNome = new JTextField();
-	textNome.setBounds(70, 10, 50, 30);
+	textNome.setBounds(70, 10, 120, 30);
 
 	//JLabelPeso
 	JLabel labelPeso = new JLabel();
 	labelPeso.setText("Peso:");
-	labelPeso.setBounds(150, 10, 60, 30);
+	labelPeso.setBounds(235, 10, 60, 30);
 
-	//JTextAlturaPeso
+	//JTextPeso
 	JTextField textPeso = new JTextField();
-	textPeso.setBounds(200, 10, 50, 30);
+	textPeso.setBounds(280, 10, 50, 30);
 	
-	//JText
+	//JTextAltura
+	JLabel labelAltura = new JLabel();
+	labelAltura.setText("Altura:");
+	labelAltura.setBounds(10, 60, 60, 30);
+
+	//JTextFieldAltura
+	JTextField textAltura = new JTextField();
+	textAltura.setBounds(70, 60, 50, 30);
+
+
+	//JLabelDataDeNascimento
 	
+	JLabel labelNascimento = new JLabel ();
+	labelNascimento.setText("Data de Nascimento:");
+	labelNascimento.setBounds(150, 0, 200, 150);
 
+	//JTextFieldDataDeNascimento
 
-
-
-
-
-
-
+	JTextField textDataDeNascimento = new JTextField();
+	textDataDeNascimento.setBounds(280, 60, 120, 30);
 
 
 	tela.getContentPane().add(labelNome);
 	tela.getContentPane().add(textNome);
 	tela.getContentPane().add(labelPeso);
 	tela.getContentPane().add(textPeso);
-
-
+	tela.getContentPane().add(labelAltura);
+	tela.getContentPane().add(textAltura);
+	tela.getContentPane().add(labelNascimento);
+	tela.getContentPane().add(textDataDeNascimento);
 
 
 
