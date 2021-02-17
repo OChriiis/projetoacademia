@@ -11,5 +11,7 @@ public class NivelDeAtividade {
 	public static final double leve1 =(1.6);
 	public static final double moderado1 =(1.6);
 	public static final double intenso1 =(1.8);
-
+	public static final String getSeletecdItem() {
+		return null; 
+	}
 }

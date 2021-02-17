@@ -1,6 +1,10 @@
 package br.senai.sp.jandira.gui.Projetoacademia;
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.time.LocalDate;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -10,6 +14,9 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+
+import br.senai.sp.jandira.NivelDeAtividade.NivelDeAtividade;
+import br.senai.sp.jandira.Projetoacademia.Cliente;
 
 
 public class FrameAcademia {
@@ -84,6 +91,7 @@ public class FrameAcademia {
 	
 	JComboBox<String> box = new JComboBox<String>();
 	box.setBounds(120, 170, 120, 30);
+	box.addActionListener(box);
 	
 	JPanel container = new JPanel();
 	
@@ -118,10 +126,6 @@ public class FrameAcademia {
 	labelNCD.setText("NCD              =             ");
 	labelNCD.setBounds(10, 370, 120, 30);
 	
-	
-	
-	
-	
 	tela.getContentPane().add(labelNCD);
 	tela.getContentPane().add(labelIMC);
 	tela.getContentPane().add(labelResultados);
@@ -146,7 +150,28 @@ public class FrameAcademia {
 	tela.setLayout(null);
 	tela.setVisible(true);
 
-
+ //Ouvintes
+	
+	buttonCalcular.addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+	
+		Cliente aluno = new Cliente();
+		
+		aluno.setNome(textNome.getText());
+		aluno.setAltura(Double.parseDouble(textAltura.getText()));
+		aluno.setPeso(Double.parseDouble(textPeso.getText()));
+		aluno.setDatadenascimento(LocalDate.of(2011, 9, 02));
+		aluno.setniveldeatividade(Double.parseDouble(NivelDeAtividade.getSeletecdItem()));
+			
+			
+			
+			
+			
+		}
+	});
 
 
 

@@ -120,7 +120,7 @@ public class Cliente {
 
 		// homem
 
-		if (this.sexo == "Masculino") {
+		if (this.sexo.equals("Masculino")) {
 
 			if (this.getIdade() >= 18 && this.getIdade() <= 30) {
 				ncd = 15.3 * this.peso + 679;
@@ -173,4 +173,8 @@ public class Cliente {
 
 	}
 
+
+	
+
 }
+

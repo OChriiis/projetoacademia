@@ -16,11 +16,11 @@ public class App {
 		FrameAcademia telaAcademia = new FrameAcademia();		
 		telaAcademia.criarTela();
 		
-		clienteMarcos.setNome("Jeferson William");
-		clienteMarcos.setDatadenascimento(LocalDate.of(1950,2,9)); 
-		clienteMarcos.setSexo("Masculino");
-		clienteMarcos.setPeso(85);
-		clienteMarcos.setAltura(1.74);
+		clienteMarcos.setNome("Mariana Matilde");
+		clienteMarcos.setDatadenascimento(LocalDate.of(1974,10,2)); 
+		clienteMarcos.setSexo("Feminino");
+		clienteMarcos.setPeso(78);
+		clienteMarcos.setAltura(1.67);
 		clienteMarcos.setniveldeatividade(NivelDeAtividade.leve);
 		
 		System.out.println("Nome: "+ clienteMarcos.getNome());
