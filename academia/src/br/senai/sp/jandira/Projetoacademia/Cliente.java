@@ -120,21 +120,27 @@ public class Cliente {
 
 		// homem
 
-		if (this.sexo.equals("Masculino")) {
+		if (this.sexo == "Masculino") {
 
 			if (this.getIdade() >= 18 && this.getIdade() <= 30) {
-				ncd = 15.3 * this.peso + 697;
+				ncd = 15.3 * this.peso + 679;
 			} else if (this.getIdade() >= 30 && this.getIdade() <= 60) {
 				ncd = 11.6 * this.peso + 879;
 			} else {
-				ncd *= 13.5 * this.peso + 487;
+				ncd = 13.5 * this.peso + 489;
 			}
 
 			if (this.niveldeatividade == NivelDeAtividade.leve) {
 				ncd *= 1.5;
-			} else if (this.niveldeatividade == NivelDeAtividade.moderado)
+		
+			} else if (this.niveldeatividade == NivelDeAtividade.moderado) {
+			
+				ncd *= 1.8;
+			} else if (this.niveldeatividade == NivelDeAtividade.intenso) {
+		
 				ncd *= 2.1;
-		}
+			}
+			}
 		
 
 		// mulher
@@ -151,9 +157,12 @@ public class Cliente {
 
 			if (this.niveldeatividade == NivelDeAtividade.leve1) {
 				ncd *= 1.6;
+		
 			} else if (this.niveldeatividade == NivelDeAtividade.moderado1) {
+			
 				ncd *= 1.6;
-			} else {
+			} else if (this.niveldeatividade == NivelDeAtividade.intenso1) {
+		
 				ncd *= 1.8;
 			}
 

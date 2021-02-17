@@ -16,21 +16,21 @@ public class App {
 		FrameAcademia telaAcademia = new FrameAcademia();		
 		telaAcademia.criarTela();
 		
-		clienteMarcos.setNome("João Félix");
-		clienteMarcos.setDatadenascimento(LocalDate.of(1945,03,02)); 
-		clienteMarcos.setSexo("Masculino");
-		clienteMarcos.setPeso(90);
-		clienteMarcos.setAltura(1.90);
-		clienteMarcos.setniveldeatividade(NivelDeAtividade.moderado);
+		clienteMarcos.setNome("Juliana");
+		clienteMarcos.setDatadenascimento(LocalDate.of(1950,9,23)); 
+		clienteMarcos.setSexo("Feminino");
+		clienteMarcos.setPeso(85);
+		clienteMarcos.setAltura(1.74);
+		clienteMarcos.setniveldeatividade(NivelDeAtividade.leve1);
 		
-		System.out.println("nome:"+clienteMarcos.getNome());
-		System.out.println(clienteMarcos.getIdade());
-		System.out.println(clienteMarcos.getAltura());
-		System.out.println(clienteMarcos.getPeso());
-		System.out.println(clienteMarcos.getSexo());
-		System.out.println(clienteMarcos.getCalcularIMC());
+		System.out.println("Nome: "+ clienteMarcos.getNome());
+		System.out.println("Idade: " + clienteMarcos.getIdade());
+		System.out.println("Altura: " + clienteMarcos.getAltura());
+		System.out.println("Peso: " + clienteMarcos.getPeso());
+		System.out.println("Sexo: " + clienteMarcos.getSexo());
+		System.out.println("IMC = " + clienteMarcos.getCalcularIMC());
 		System.out.println("NCD = " + clienteMarcos.getCalcularNcd());
-		System.out.println(clienteMarcos.getSituacao());
+		System.out.println("Situação: " + clienteMarcos.getSituacao());
 		
 		
 		clienteMarcos.getCalcularNcd();
