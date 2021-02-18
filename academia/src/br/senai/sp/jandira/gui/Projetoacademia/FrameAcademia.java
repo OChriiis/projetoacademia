@@ -165,15 +165,33 @@ public class FrameAcademia {
 		aluno.setPeso(Double.parseDouble(textPeso.getText()));
 		aluno.setDatadenascimento(LocalDate.of(2011, 9, 02));
 		aluno.setniveldeatividade(Double.parseDouble(NivelDeAtividade.getSeletecdItem()));
+		
+		labelIMC.setText("IMC: " + String.valueOf(aluno.getCalcularIMC()));
+		labelNCD.setText("NCD: " + aluno.getIdade() + aluno.getPeso() + String.valueOf(aluno.getCalcularNcd()));
+		
+		if (radioFeminino.isSelected()) {
 			
-			
-			
-			
+		}
+	
 			
 		}
 	});
 
-
+	//limpar
+			buttonLimpar.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					textAltura.setText("");
+					textDataDeNascimento.setText("");
+					textNome.setText("");
+					textPeso.setText("");
+					
+					
+					
+					
+				}
+			});
 
 
 
